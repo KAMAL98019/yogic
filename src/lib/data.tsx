@@ -25,17 +25,17 @@ export const SERVICES = [
   },
   {
     number: "03",
-    title: "Pain Management Therapies",
+    title: "Panchakarma Therapies & Reflexology",
     description:
-      "Supportive, natural approaches for chronic and everyday pain, tailored to each patient's lifestyle and history.",
-    icon: "activity",
+      "Traditional Panchakarma detoxification practices paired with gentle pressure-point reflexology on the hands and feet, supporting circulation, relaxation and the body's natural balance.",
+    icon: "footprints",
   },
   {
     number: "04",
-    title: "Reflexology",
+    title: "Juicing Therapy and Healing Diet Plan",
     description:
-      "Gentle pressure-point therapy on the hands and feet to encourage relaxation and overall wellbeing.",
-    icon: "footprints",
+      "Personalised nutritional guidance featuring two distinct approaches tailored to your body’s needs — an ‘Active’ diet plan designed to support energy and rejuvenation, and a ‘Healing’ diet plan focused on deep rest, nourishment, and recovery — complemented by targeted juicing therapies to naturally nourish the body and restore holistic balance.",
+    icon: "diet",
   },
 ] as const;
 
@@ -614,7 +614,7 @@ export const EXPERIENCE = [
 
 export const STATS = [
   { value: "2012", label: "Clinic Founded" },
-  { value: "10+ Years", label: "Healthcare Journey" },
+  { value: "14+ Years", label: "Healthcare Journey" },
   { value: "BHMS + MD", label: "Professional Qualification" },
 ] as const;
 
