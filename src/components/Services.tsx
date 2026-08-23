@@ -14,7 +14,7 @@ export default function Services() {
         <SectionHeading
           eyebrow="What We Offer"
           title="Our Approach to Holistic Wellness"
-          description="Four pillars that work together to support the body, mind and daily habits."
+          description="Four pillars that work together to support the body, mind and Souls."
         />
 
         <RevealGroup className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6" stagger={0.08}>
