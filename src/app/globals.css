@@ -1,26 +1,87 @@
 @import "tailwindcss";
 
+/*
+ * Sattvic (light, natural) palette. Token names below were introduced during
+ * a dark-theme exploration and kept for structural consistency, but now hold
+ * light values — "ink" = page background, "cream" = main (dark) text,
+ * "gold" = sage accent, "maroon" = warm terracotta accent.
+ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-ink: #faf6ec;
+  --color-ink-raised: #f2ead4;
+  --color-ink-card: #fffdf7;
+  --color-hairline: rgba(38, 54, 36, 0.1);
+  --color-cream: #26362a;
+  --color-cream-dim: rgba(38, 54, 36, 0.72);
+  --color-cream-faint: rgba(38, 54, 36, 0.5);
+  --color-gold: #4d6a41;
+  --color-gold-soft: rgba(77, 106, 65, 0.35);
+  --color-gold-dim: #eef2ea;
+  --color-maroon: #8a5a34;
+  --color-maroon-bright: #6e4527;
+  --color-footer: #1f2e22;
+  --color-footer-ink: #efe8d8;
+  --background: var(--color-ink);
+  --foreground: var(--color-cream);
 }
 
 @theme inline {
+  --color-ink: var(--color-ink);
+  --color-ink-raised: var(--color-ink-raised);
+  --color-ink-card: var(--color-ink-card);
+  --color-hairline: var(--color-hairline);
+  --color-cream: var(--color-cream);
+  --color-cream-dim: var(--color-cream-dim);
+  --color-cream-faint: var(--color-cream-faint);
+  --color-gold: var(--color-gold);
+  --color-gold-soft: var(--color-gold-soft);
+  --color-gold-dim: var(--color-gold-dim);
+  --color-maroon: var(--color-maroon);
+  --color-maroon-bright: var(--color-maroon-bright);
+  --color-footer: var(--color-footer);
+  --color-footer-ink: var(--color-footer-ink);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-inter);
+  --font-sans: var(--font-inter);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-gold-dim);
+  color: var(--color-cream);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.heading-caps {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
